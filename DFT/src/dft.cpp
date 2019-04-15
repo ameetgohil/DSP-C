@@ -48,13 +48,17 @@ int main() {
 	fprintf(fptr1,"\n%f", InputSignal_f32_1kHz_15kHz[i]);
     }
 
-    for(int i = 0; i < SIG_LENGTH; i++) {
+    for(int i = 0; i < SIG_LENGTH/2; i++) {
 	fprintf(fptr2,"\n%f", Output_REX[i]);
     }
 
-    for(int i = 0; i < SIG_LENGTH; i++) {
+    for(int i = 0; i < SIG_LENGTH/2; i++) {
 	fprintf(fptr3,"\n%f", Output_IMX[i]);
     }
+
+    fclose(fptr1);
+    fclose(fptr2);
+    fclose(fptr3);
     
     return 0;
 }
